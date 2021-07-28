@@ -1,8 +1,6 @@
 var express = require('express'),
     async = require('async'),
-    pg = require('pg'),
-    { Pool } = require('pg'),
-    path = require('path'),
+    pg = require("pg"),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
@@ -21,10 +19,6 @@ io.sockets.on('connection', function (socket) {
   socket.on('subscribe', function (data) {
     socket.join(data.channel);
   });
-});
-
-var pool = new pg.Pool({
-  connectionString: 'postgres://postgres:postgres@db/postgres'
 });
 
 async.retry(

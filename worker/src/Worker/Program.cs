@@ -16,7 +16,7 @@ namespace Worker
         {
             var redisHostname = Environment.GetEnvironmentVariable("ENV_VAR_REDIS_HOSTNAME") ?? "redis";
             var redisPort = Environment.GetEnvironmentVariable("ENV_VAR_REDIS_PORT") ?? "6379";
-            var redisPassword = Environment.GetEnvironmentVariable("ENV_VAR_REDIS_PASSWORD") ?? "redis_password";
+            var redisPassword = Environment.GetEnvironmentVariable("ENV_VAR_REDIS_PASSWORD") ?? "REDIS_PASSWORD";
             var pgHost = Environment.GetEnvironmentVariable("ENV_VAR_POSTGRES_HOST") ?? "db";
             var pgPort = Environment.GetEnvironmentVariable("ENV_VAR_POSTGRES_PORT") ?? "5432";
             var pgDatabase = Environment.GetEnvironmentVariable("ENV_VAR_POSTGRES_DATABASE") ?? "postgres";
